@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="sk.posam.sfa.jpa.classes.Person">
+        <property name="name" value="John Doe"/>
+    </bean>
+
+    <bean id="address" class="sk.posam.sfa.jpa.classes.Address">
+        <property name="street" value="123 Main Street"/>
+        <property name="city" value="Bratislava"/>
+    </bean>
+
+    <bean id="company" class="sk.posam.sfa.jpa.classes.Company">
+        <property name="name" value="Posam"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+</beans>
